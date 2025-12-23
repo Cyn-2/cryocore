@@ -10,6 +10,7 @@
 <body>
   <header id="home">
     <nav>
+      <div class="logo"><span>❄️</span> CryoCore</div>
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About Us</a></li>
@@ -20,49 +21,49 @@
       </ul>
     </nav>
     <div class="hero">
-      <h1>Welcome to CryoCore</h1>
-      <p>Kings of Cold – Cold Storage & Advisory Excellence</p>
+      <h1>Kings of Cold – Cold Storage & Advisory Excellence</h1>
     </div>
   </header>
 
   <section id="about" class="reveal">
     <h2>About Us</h2>
-    <p>CryoCore is Uganda's premier cold storage management and advisory company...</p>
+    <p>CryoCore is Uganda's premier cold storage management and advisory company, specializing in innovative solutions for the agricultural and logistics sectors. With a focus on sustainability and efficiency, we partner with businesses to optimize cold chain operations across East Africa.</p>
   </section>
 
   <section id="team" class="reveal">
     <h2>Our Team</h2>
-    <p>Led by experienced directors with expertise in storage, energy, and logistics...</p>
+    <p>Led by experienced directors with expertise in storage, energy, and logistics, our team brings decades of industry knowledge to deliver tailored cold storage solutions that drive growth and reduce waste.</p>
   </section>
 
-  <section id="partners" class="reveal">
+  <section id="partners">
     <h2>Our Partners</h2>
-    <div class="logos">
-      <img src="images/partner1.png" alt="Ministry of Trade">
-      <img src="images/partner2.png" alt="PureGrow Africa">
-      <!-- more placeholders -->
+    <div class="logos" id="partnersContainer">
+      <!-- Logos will be rendered here via JS -->
     </div>
   </section>
 
-  <section id="projects" class="reveal">
+  <section id="projects">
     <h2>Projects</h2>
-    <p>From Lusaka to Hoima – discover our pan-African cold chain impact...</p>
+    <div id="projectsContainer">
+      <!-- Projects will be rendered here via JS -->
+    </div>
   </section>
 
   <section id="contact" class="reveal">
     <h2>Contact Us</h2>
-    <form action="contact.php" method="POST">
+    <form id="contactForm" action="contact.php" method="POST">
       <input type="text" name="name" placeholder="Your Name" required><br>
       <input type="email" name="email" placeholder="Your Email" required><br>
       <textarea name="message" placeholder="Your Message" required></textarea><br>
       <button type="submit">Send</button>
     </form>
+    <div id="formMessage"></div>
     <p>📞 +256 776 345 317 | 📞 +256 783 818 393 | ✉️ info@ccmguganda.com</p>
   </section>
 
   <footer>
     <p>&copy; 2025 CryoCore Management Group. All rights reserved.</p>
   </footer>
-  <script src="script.js?v=1"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>

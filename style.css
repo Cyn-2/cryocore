@@ -1,27 +1,151 @@
 
-body { font-family: Candara, sans-serif; margin: 0; padding: 0; scroll-behavior: smooth; }
-nav { background: #1E4C8F; color: white; padding: 1em; position: sticky; top: 0; }
-nav ul { list-style: none; display: flex; gap: 15px; justify-content: center; }
-nav a { color: white; text-decoration: none; }
-.hero { padding: 100px 20px; text-align: center; background: linear-gradient(to right, #2563A6, #1E4C8F); color: white; }
-section { padding: 60px 20px; }
-.logos img { max-width: 120px; margin: 10px; }
-footer { background: #1E4C8F; color: white; text-align: center; padding: 20px; }
+/* Professional Styling for CryoCore */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333;
+  background: #f8f9fa;
+}
+
+nav {
+  background: linear-gradient(135deg, #1E4C8F, #2563A6);
+  color: white;
+  padding: 1.5rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 3rem;
+}
+
+.logo span {
+  font-size: 2.2rem;
+  margin-right: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 6rem;
+}
+
 nav a {
-  transition: color 0.25s ease, border-bottom 0.25s ease;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
 }
 
-nav a.active {
+nav a:hover, nav a.active {
+  background: rgba(255,255,255,0.2);
   color: #4FA3C8;
-  border-bottom: 2px solid rgba(79, 163, 200, 0.6);
 }
-/* ===============================
-   SECTION REVEAL ANIMATION
-================================ */
 
+.hero {
+  padding: 150px 2rem 100px;
+  text-align: left;
+  background: linear-gradient(rgba(30, 76, 143, 0.4), rgba(37, 99, 166, 0.4)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  margin-top: 0;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  line-height: 1.2;
+  max-width: 600px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+section {
+  padding: 80px 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1E4C8F;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #4FA3C8;
+  margin: 1rem auto;
+  border-radius: 2px;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.logos img {
+  max-width: 120px;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.logos img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background: #1E4C8F;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Reveal Animation */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(30px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
@@ -29,6 +153,114 @@ nav a.active {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Project Items */
+.project-item {
+  background: white;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-left: 5px solid #2563A6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.project-item h3 {
+  margin-top: 0;
+  color: #1E4C8F;
+  font-size: 1.5rem;
+}
+
+.project-item small {
+  color: #666;
+  font-style: italic;
+}
+
+/* Contact Form */
+#contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#contactForm input, #contactForm textarea {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+#contactForm input:focus, #contactForm textarea:focus {
+  outline: none;
+  border-color: #2563A6;
+}
+
+#contactForm button {
+  padding: 1rem;
+  background: #2563A6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#contactForm button:hover {
+  background: #1E4C8F;
+}
+
+#formMessage {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+    position: static;
+  }
+  nav ul {
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  section {
+    padding: 60px 1rem;
+  }
+  .logos {
+    gap: 1rem;
+  }
+  .project-item {
+    padding: 1.5rem;
+  }
+  #contactForm {
+    max-width: 100%;
+  }
+  #contact p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+}
+
 
 
   
