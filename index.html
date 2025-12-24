@@ -3,15 +3,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CryoCore Management Group</title>
+  <title>CryoCore Management Group | Cold Storage & Advisory Excellence</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="CryoCore is Uganda's premier cold storage management and advisory company, specializing in innovative solutions for the agricultural and logistics sectors across East Africa.">
+  <meta name="keywords" content="cold storage, Uganda, East Africa, cold chain, logistics, agricultural storage, CryoCore, Kampala">
+  <meta name="author" content="CryoCore Management Group">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ccmguganda.com/">
+  <meta property="og:title" content="CryoCore Management Group | Kings of Cold">
+  <meta property="og:description" content="Uganda's premier cold storage management and advisory company. Innovative solutions for agricultural and logistics sectors across East Africa.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://ccmguganda.com/">
+  <meta name="twitter:title" content="CryoCore Management Group | Kings of Cold">
+  <meta name="twitter:description" content="Uganda's premier cold storage management and advisory company. Innovative solutions for agricultural and logistics sectors across East Africa.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❄️</text></svg>">
+  
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
   <header id="home">
     <nav>
-      <div class="logo"><span>❄️</span> CRYOCORE</div>
-      <ul>
+      <a href="#home" class="logo"><span>❄️</span> CRYOCORE</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About Us</a></li>
         <li><a href="#team">Team</a></li>
@@ -73,36 +101,113 @@
     </div>
   </section>
 
-  <section id="partners">
+  <section id="partners" class="partners-section">
     <h2>Our Partners</h2>
+    <p class="partners-intro">We collaborate with leading organizations across Uganda and East Africa to deliver excellence in cold chain solutions.</p>
     <div class="logos" id="partnersContainer">
       <!-- Logos will be rendered here via JS -->
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="projects-section">
     <h2>Projects</h2>
-    <div id="projectsContainer">
+    <p class="projects-intro">Transforming cold chain infrastructure across East Africa through innovative, sustainable solutions.</p>
+    <div class="projects-grid" id="projectsContainer">
       <!-- Projects will be rendered here via JS -->
     </div>
   </section>
 
-  <section id="contact" class="reveal">
+  <section id="contact" class="contact-section">
     <h2>Contact Us</h2>
-    <form id="contactForm" action="contact.php" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required><br>
-      <input type="email" name="email" placeholder="Your Email" required><br>
-      <textarea name="message" placeholder="Your Message" required></textarea><br>
-      <button type="submit">Send</button>
-    </form>
-    <div id="formMessage"></div>
-    <p>📞 +256 776 345 317 | 📞 +256 783 818 393 | ✉️ info@ccmguganda.com</p>
+    <div class="contact-container">
+      <div class="contact-info">
+        <p class="contact-intro">Ready to optimize your cold chain operations? Let's discuss how CryoCore can help your business thrive.</p>
+        
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <div class="contact-text">
+              <span class="contact-label">Call Us</span>
+              <a href="tel:+256776345317">+256 776 345 317</a>
+              <a href="tel:+256783818393">+256 783 818 393</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="contact-text">
+              <span class="contact-label">Email Us</span>
+              <a href="mailto:info@ccmguganda.com">info@ccmguganda.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="contact-text">
+              <span class="contact-label">Location</span>
+              <span>Kampala, Uganda</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form-wrapper">
+        <form id="contactForm" action="contact.php" method="POST">
+          <div class="form-group">
+            <input type="text" name="name" id="name" placeholder=" " required>
+            <label for="name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" id="email" placeholder=" " required>
+            <label for="email">Your Email</label>
+          </div>
+          <div class="form-group">
+            <input type="text" name="subject" id="subject" placeholder=" ">
+            <label for="subject">Subject</label>
+          </div>
+          <div class="form-group">
+            <textarea name="message" id="message" placeholder=" " required rows="4"></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          <button type="submit">
+            <span>Send Message</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
+        <div id="formMessage"></div>
+      </div>
+    </div>
   </section>
   </main>
 
   <footer>
     <p>&copy; 2025 CryoCore Management Group. All rights reserved.</p>
   </footer>
+  
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" aria-label="Scroll to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+  
   <script src="script.js?v=3"></script>
 </body>
 </html>
