@@ -586,7 +586,7 @@ section h2.animate::after {
   transform: scaleX(1);
 }
 
-/* Option 2: Large Card Grid - All in one row */
+/* Partners Grid */
 .logos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
