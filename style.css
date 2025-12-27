@@ -199,7 +199,7 @@ nav .nav-menu a:hover, nav .nav-menu a.active {
 .about-section {
   background: #fff;
   max-width: 100%;
-  padding: 80px 2rem;
+  padding: 40px 2rem 72px 2rem;
 }
 
 .about-container {
@@ -295,9 +295,9 @@ nav .nav-menu a:hover, nav .nav-menu a.active {
 
 /* Team Section Styling */
 .team-section {
-  background: #e8f1f8;
+  background: #d0e3f0;
   max-width: 100%;
-  padding: 80px 2rem;
+  padding: 40px 2rem 72px 2rem;
 }
 
 .team-section h2 {
@@ -358,7 +358,7 @@ nav .nav-menu a:hover, nav .nav-menu a.active {
 }
 
 section {
-  padding: 80px 2rem;
+  padding: 40px 2rem 72px 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -367,7 +367,7 @@ section {
 .partners-section {
   background: #fff;
   max-width: 100%;
-  padding: 100px 2rem;
+  padding: 40px 2rem 72px 2rem;
   position: relative;
   overflow: hidden;
 }
@@ -399,9 +399,9 @@ section {
 
 /* Projects Section */
 .projects-section {
-  background: #e8f1f8;
+  background: #d0e3f0;
   max-width: 100%;
-  padding: 100px 2rem;
+  padding: 40px 2rem 72px 2rem;
   position: relative;
 }
 
@@ -424,6 +424,17 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .project-card {
@@ -575,56 +586,52 @@ section h2.animate::after {
   transform: scaleX(1);
 }
 
+/* Option 2: Large Card Grid - All in one row */
 .logos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
 .partner-card {
-  background: #fff;
-  border-radius: 20px;
+  position: relative;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  animation: fadeInUp 0.6s ease forwards;
-  opacity: 0;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  height: 300px;
 }
 
 .partner-card:hover {
-  transform: translateY(-12px) scale(1.02);
-  box-shadow: 0 25px 60px rgba(30, 76, 143, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(30, 76, 143, 0.25);
 }
 
 .partner-image-wrapper {
-  position: relative;
-  height: 180px;
-  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1E4C8F;
 }
 
 .partner-image-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  object-position: center;
+  transition: transform 0.6s ease, opacity 0.4s ease;
+  display: block;
 }
 
 .partner-card:hover .partner-image-wrapper img {
   transform: scale(1.1);
+  opacity: 0.7;
 }
 
 .partner-overlay {
@@ -633,71 +640,52 @@ section h2.animate::after {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(180deg, transparent 40%, rgba(30, 76, 143, 0.9) 100%);
+  background: linear-gradient(180deg, transparent 30%, rgba(30, 76, 143, 0.95) 100%);
   display: flex;
-  align-items: flex-end;
-  padding: 1rem;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  opacity: 1;
+  transition: background 0.4s ease;
 }
 
 .partner-card:hover .partner-overlay {
-  opacity: 1;
+  background: linear-gradient(180deg, rgba(30, 76, 143, 0.3) 0%, rgba(30, 76, 143, 0.95) 100%);
 }
 
 .partner-tag {
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
-  color: white;
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 500;
+  display: none;
 }
 
 .partner-info {
-  padding: 1.5rem;
-  text-align: center;
-  background: linear-gradient(180deg, #fff 0%, #f8fafc 100%);
+  padding: 0;
+  background: transparent;
+  text-align: left;
 }
 
 .partner-info h4 {
   margin: 0 0 0.5rem 0;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: #1E4C8F;
+  color: #fff;
 }
 
 .partner-info p {
   margin: 0;
-  font-size: 0.85rem;
-  color: #64748b;
-  font-weight: 500;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+  font-weight: 400;
 }
 
-@media (max-width: 1024px) {
-  .logos {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .logos {
     grid-template-columns: 1fr;
-    max-width: 350px;
+    max-width: 500px;
   }
-}
-
-.logos img {
-  max-width: 120px;
-  height: auto;
-  transition: transform 0.3s ease;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.logos img:hover {
-  transform: scale(1.05);
+  
+  .partner-card {
+    height: 250px;
+  }
 }
 
 footer {
@@ -795,7 +783,7 @@ footer p {
 .contact-section {
   background: #fff;
   max-width: 100%;
-  padding: 100px 2rem;
+  padding: 40px 2rem 72px 2rem;
   position: relative;
   overflow: hidden;
 }

@@ -218,7 +218,7 @@ console.log("🔥 SCRIPT.JS UPDATED AT " + new Date().toLocaleTimeString());
     {
       title: "Pan-African Cold Chain Network",
       description: "A comprehensive network connecting cold storage facilities across Uganda, Kenya, Tanzania, and Rwanda to streamline regional agricultural trade.",
-      location: "East Africa",
+      location: "Africa",
       status: "Planning",
       year: "2026",
       image: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
@@ -233,13 +233,9 @@ console.log("🔥 SCRIPT.JS UPDATED AT " + new Date().toLocaleTimeString());
     projectDiv.className = 'project-card';
     projectDiv.style.animationDelay = `${index * 0.15}s`;
     
-    const statusClass = project.status.toLowerCase().replace(' ', '-');
-    
     projectDiv.innerHTML = `
       <div class="project-image">
         <img src="${project.image}" alt="${project.title}">
-        <div class="project-status ${statusClass}">${project.status}</div>
-        <div class="project-year">${project.year}</div>
       </div>
       <div class="project-content">
         <h3>${project.title}</h3>
@@ -263,7 +259,7 @@ console.log("🔥 SCRIPT.JS UPDATED AT " + new Date().toLocaleTimeString());
   console.log('Running dynamic partners');
   const partners = [
     { 
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Flag_of_Uganda.svg/200px-Flag_of_Uganda.svg.png", 
+      src: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Flag_of_Uganda.svg", 
       alt: "Ministry of Trade, Industry & Cooperatives Uganda", 
       name: "Ministry of Trade",
       description: "Government Partnership"
@@ -282,8 +278,8 @@ console.log("🔥 SCRIPT.JS UPDATED AT " + new Date().toLocaleTimeString());
     },
     { 
       src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80", 
-      alt: "East African Cold Chain Alliance", 
-      name: "EA Cold Chain",
+      alt: "African Cold Chain Alliance", 
+      name: "African Cold Chain",
       description: "Logistics Alliance"
     }
   ];
@@ -294,18 +290,16 @@ console.log("🔥 SCRIPT.JS UPDATED AT " + new Date().toLocaleTimeString());
   partners.forEach((partner, index) => {
     const partnerCard = document.createElement('div');
     partnerCard.className = 'partner-card';
-    partnerCard.style.animationDelay = `${index * 0.1}s`;
     
     partnerCard.innerHTML = `
       <div class="partner-image-wrapper">
         <img src="${partner.src}" alt="${partner.alt}">
-        <div class="partner-overlay">
-          <span class="partner-tag">${partner.description}</span>
-        </div>
       </div>
-      <div class="partner-info">
-        <h4>${partner.name}</h4>
-        <p>${partner.description}</p>
+      <div class="partner-overlay">
+        <div class="partner-info">
+          <h4>${partner.name}</h4>
+          <p>${partner.description}</p>
+        </div>
       </div>
     `;
     
